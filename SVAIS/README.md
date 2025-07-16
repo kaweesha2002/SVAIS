@@ -39,3 +39,8 @@ Future work may include:
 - Enhancing documentation and educational resources for users.
 
 Thank you for your interest in SVAIS! We hope this project serves as a valuable resource for learning and experimentation in audio signal processing.
+
+
+# Team 
+
+- Thaariq
