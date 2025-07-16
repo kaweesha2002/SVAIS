@@ -1,0 +1,12 @@
+# Part,Quantity,Description
+ESP32 DevKit V1,1,Development board with female pin headers
+MAX4466 Microphone Module,1,Analog output microphone module
+PAM8403 Speaker Amplifier,1,Amplifier for driving the speaker
+3.7V 1200mAh LiPo Battery,1,Rechargeable lithium polymer battery
+UPS Module,1,Module for charging, protection, and boosting to 5V
+HT7333 or AMS1117-3.3,1,Voltage regulator for 3.3V supply to ESP32
+1N5819 Diodes,2,Diodes for power path switching
+Tactile Buttons,2,Optional buttons for BOOT/RESET functionality
+JST Connectors,2,Connectors for battery and other modules
+Headers,1 set,Pin headers for connections
+8Ω Speaker,1,Speaker for audio output
