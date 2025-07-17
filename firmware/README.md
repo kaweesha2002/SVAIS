@@ -1,59 +1,51 @@
-# README for SVAIS Firmware Development
+# SVAIS Firmware Development
+
+## Project Context
+This document details the firmware development for the Smart Voice-based Acoustic Intelligent System (SVAIS), a project for the EE254 course. The objective is to design, implement, and test the embedded software for the ESP32 microcontroller, which serves as the core of the SVAIS hardware.
 
 ## Overview
-This directory contains the firmware source code and related files for the Smart Voice-based Acoustic Intelligent System (SVAIS) project. The firmware is designed to run on the ESP32 microcontroller and interfaces with various hardware components, including microphones, speakers, and amplifiers.
+The firmware is responsible for managing the system's hardware components, including microphones, speakers, and amplifiers. It processes acoustic data and executes the system's core logic. This directory contains all source code, libraries, and related development files.
 
 ## Directory Structure
-- **src/**: Contains the main source code files for the firmware.
-  - `main.cpp`: The entry point for the firmware application.
-  
-- **lib/**: This directory is reserved for any libraries that may be used in the project. Additional libraries can be added here as needed.
+- **SVAIS/**: Contains the main Arduino sketch.
+   - `SVAIS.ino`: The primary application entry point.
+- **lib/**: Reserved for custom libraries developed specifically for this project. External libraries are managed by the Arduino IDE.
 
-- **platformio.ini**: Configuration file for PlatformIO, which defines the project environment, dependencies, and build settings.
+## Development Environment Setup
+To configure the development environment for the firmware, follow these steps:
 
-## Getting Started
-To get started with the firmware development, follow these steps:
+1.  **Install Arduino IDE**:
+      Ensure the latest version of the Arduino IDE is installed. It can be downloaded from the [official Arduino website](https://www.arduino.cc/en/software).
 
-1. **Clone the Repository**: 
-   Clone the SVAIS repository to your local machine using Git.
+2.  **Install ESP32 Board Support**:
+      - In the Arduino IDE, navigate to `File > Preferences`.
+      - Add the following URL to the "Additional Boards Manager URLs" field: `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
+      - Open the Boards Manager via `Tools > Board > Boards Manager...`, search for "esp32", and install the package provided by Espressif Systems.
 
-   ```
-   git clone https://github.com/yourusername/SVAIS.git
-   ```
+3.  **Install Required Libraries**:
+      Install all necessary libraries using the Arduino Library Manager (`Sketch > Include Library > Manage Libraries...`). Refer to the project's dependency list for required libraries.
 
-2. **Install PlatformIO**: 
-   Ensure you have PlatformIO installed. You can install it as a plugin in your preferred code editor or use it via the command line.
+4.  **Open the Project**:
+      Launch the Arduino IDE and open the `SVAIS.ino` file located in the `firmware/SVAIS/` directory.
 
-3. **Open the Project**: 
-   Open the `SVAIS` directory in your code editor with PlatformIO support.
+5.  **Configure and Upload**:
+      - Connect the ESP32 development board to the computer.
+      - Select the correct board model (e.g., "ESP32 Dev Module") under `Tools > Board`.
+      - Choose the appropriate COM port from `Tools > Port`.
+      - Click the "Upload" button to compile the code and flash the firmware onto the ESP32.
 
-4. **Build the Project**: 
-   Use the PlatformIO build command to compile the firmware.
+## Development and Reporting Guidelines
+- Adhere to established coding standards for clarity and consistency.
+- Document code with comments explaining logic and functionality.
+- Perform unit testing for individual modules before integration.
+- Utilize version control (Git) for tracking changes and collaboration. All commits should have clear, descriptive messages.
 
-   ```
-   pio run
-   ```
+## Project Documentation
+For detailed project insights, experimental logs, and iteration findings, refer to the `docs/insights.md` file. This document serves as the primary log for project progress and decision-making.
 
-5. **Upload to ESP32**: 
-   Connect your ESP32 board to your computer and upload the firmware using the following command:
-
-   ```
-   pio run --target upload
-   ```
-
-## Development Guidelines
-- Follow coding standards and best practices for embedded systems programming.
-- Comment your code thoroughly to ensure clarity and maintainability.
-- Test each module independently before integrating into the main application.
-- Use version control effectively to manage changes and collaborate with team members.
-
-## Documentation
-Refer to the `docs/insights.md` file for insights and logs related to the project iterations and findings.
-
-## Future Work
-- Implement additional features based on the insights gathered from hardware testing.
-- Optimize the firmware for performance and memory usage.
-- Explore integration with machine learning models for enhanced sound detection capabilities.
-
-## Contact
-For any questions or contributions, please reach out to the project maintainers or open an issue in the repository.
+## Project Milestones and Future Work
+- **Current Status**: [Briefly describe the current state of the firmware]
+- **Next Steps**:
+   - Implement features based on the latest hardware testing results.
+   - Optimize firmware for performance and memory efficiency.
+   - Investigate the integration of machine learning models for advanced sound classification.

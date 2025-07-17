@@ -50,6 +50,6 @@ def process_audio_directory(input_dir, output_csv):
             log_features_to_csv(features, output_csv)
 
 if __name__ == "__main__":
-    input_directory = '../data/raw/'  # Adjust path as necessary
-    output_csv_file = '../tests/test_results_round1.csv'  # Adjust path as necessary
+    input_directory = 'SVAIS\data\Clap Sounds'  # Adjust path as necessary
+    output_csv_file = 'SVAIS\tests\test_results_round1.csv'  # Adjust path as necessary
     process_audio_directory(input_directory, output_csv_file)
