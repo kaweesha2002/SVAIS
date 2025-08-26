@@ -6,7 +6,7 @@ const char* password = "12345678";  // Must be at least 8 chars
 
 WebServer server(80);
 
-const int micPin = 34;
+const int micPin = 32;
 
 void handleData() {
   int soundVal = analogRead(micPin);
