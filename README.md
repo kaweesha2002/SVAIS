@@ -1,8 +1,6 @@
 <div align="center">
 
-# SVAIS (Smart Voice-based Acoustic Intelligent System) 🤖🔊
-
-**An interactive Simon Says game using real-time audio classification with ESP32 and MATLAB**
+# An interactive Simon Says game using real-time audio classification with ESP32 and MATLAB 🤖🔊
 
 </div>
 
